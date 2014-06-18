@@ -1,6 +1,6 @@
 \name{mnist}
 \alias{mnist}
-\alias{download.mnist()}
+\alias{download.mnist}
 \title{MNIST handwritten digits dataset}
 
 \description{
@@ -24,7 +24,7 @@ download.mnist()
 	}
 }
 
-\description{
+\details{
 At the first time the package is loaded, the mnist dataset is downloaded from \url{http://yann.lecun.com/exdb/mnist/} and saved in the package \code{data} directory.
 }
 
@@ -37,9 +37,10 @@ The dataset is downloaded with code inspired from: \url{https://gist.github.com/
 \examples{
 data(mnist) # the dataset is implicitly loaded when the package is attached, so this line is optionnal
 str(mnist)
-mnist$show.digit(mnist$test$x[1:10,])
 
-#\dontrun{
+show.digit(mnist$test$x[1:10,])
+
+\dontrun{
 mnist.copy <- download.mnist()
 }
 }
