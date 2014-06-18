@@ -1,5 +1,6 @@
 
-plot.mnist <- function(data = mnist$test$x, label = mnist$test$y + 1, prediction, reconstruction, 
+plot.mnist <- function(data = mnist$test$x, label = mnist$test$y + 1, model = prcomp(mnist$train$x),
+					   prediction = predict(model, data)[,1:2], reconstruction = tcrossprod(prediction, model$rotation[,1:2]),
 					   highlight.digits = c(11, 3, 2, 91, 20, 188, 92, 1, 111, 13),
 					   digits.col = c("#FF0000FF", "#0000FFFF", "#964B00FF", "#FF00FFFF", "#00AAAAFF", "#00EE00FF", "#000000FF", "#000000FF", "#AAAAAAFF", "#FF9900FF"),
 					   digits.alphas.reverse = c(FALSE, TRUE)[c(1, 1, 1, 1, 1, 1, 2, 1, 1, 1)],
