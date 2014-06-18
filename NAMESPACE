@@ -1,0 +1,4 @@
+importFrom(utils, data)
+export(show.digit)
+export(plot.mnist)
+export(download.mnist)

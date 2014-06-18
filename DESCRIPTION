@@ -1,0 +1,12 @@
+Package: mnist
+Type: Package
+Title: MNIST dataset
+Description: The MNIST dataset for R
+Version: 0.2
+Date: 2014-06-18
+Author: Xavier Robin
+Encoding: UTF-8
+Maintainer: Xavier Robin <xavier@cbs.dtu.dk>
+Imports: utils
+Depends: R (>= 2.10)
+License: Copyright
