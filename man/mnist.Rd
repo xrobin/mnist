@@ -9,7 +9,12 @@ A dataset of handwritten digits provided by \url{http://yann.lecun.com/exdb/mnis
 
 \usage{
 mnist
-download.mnist()
+download.mnist(range = c(0, 1), global = FALSE)
+}
+
+\arguments{
+	\item{range}{the range of the pixel intensity values. If \code{c(0, 255)} the pixel intensities will be the raw integer values. By default, they are continuous between 0 and 1. If possible an integer matrix is returned.}
+	\item{global}{if \code{TRUE}, the \code{mnist} dataset will be permanently replaced in the package's directory and global environment. Useful to change the range in a persisting manner.}
 }
 
 \format{A list with:

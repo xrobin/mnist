@@ -4,9 +4,8 @@
 	mnist_data_file <- system.file("data/mnist.RData", package="mnist")
 	if (mnist_data_file == "") {
 		packageStartupMessage("Downloading mnist dataset...")
-		mnist <- download.mnist()
 		dir.create(paste(system.file(package="mnist"), "data", sep=.Platform$file.sep))
-		save(mnist, file = paste(system.file(package="mnist"), "data", "mnist.RData", sep=.Platform$file.sep))
+		mnist <- download.mnist(global = TRUE)
 	}
 	data(mnist) 
 	packageStartupMessage("'mnist' dataset loaded.")
