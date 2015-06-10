@@ -12,8 +12,8 @@ The package cannot be made available on the CRAN (the dataset is not open source
 
 ```R
 install.packages("devtools")
-library("devtools")
-install_github(repo = "mnist", username = "xrobin", ref = "master")
+library("")
+devtools::install_github("xrobin/mnist")
 ```
 
 Getting started
