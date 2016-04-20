@@ -15,12 +15,14 @@ install.packages("devtools")
 library("devtools")
 devtools::install_github("xrobin/mnist")
 ```
+The first time the package is loaded, the `mnist` dataset is automatically downloaded from [the MNIST database](http://yann.lecun.com/exdb/mnist) and loaded into the global environment. Subsequently the dataset is simply loaded into the global environment.
 
 Getting started
 -------
 
 ```R
 library(mnist)
+str(mnist)
 plot.mnist()
 ?mnist
 ```
