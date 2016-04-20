@@ -12,7 +12,7 @@ The package cannot be made available on the CRAN (the dataset is not open source
 
 ```R
 install.packages("devtools")
-library("")
+library("devtools")
 devtools::install_github("xrobin/mnist")
 ```
 
