@@ -1,4 +1,7 @@
 importFrom(utils, data)
+importFrom("grDevices", "gray")
+importFrom("graphics", "image", "layout", "par", "plot", "points")
+importFrom("stats", "prcomp", "predict")
 export(show.digit)
 export(plot.mnist)
 export(download.mnist)

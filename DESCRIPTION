@@ -7,7 +7,7 @@ Date: 2017-02-11
 Author: Xavier Robin
 Encoding: UTF-8
 Maintainer: Xavier Robin <robin@lindinglab.org>
-Imports: utils
+Imports: utils, grDevices, graphics, stats
 Suggests: testthat
 Depends: R (>= 2.10)
 License: Copyright
