@@ -2,8 +2,8 @@ Package: mnist
 Type: Package
 Title: MNIST dataset
 Description: The MNIST dataset for R
-Version: 0.2
-Date: 2014-06-18
+Version: 0.3
+Date: 2017-02-11
 Author: Xavier Robin
 Encoding: UTF-8
 Maintainer: Xavier Robin <robin@lindinglab.org>
