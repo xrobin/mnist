@@ -11,7 +11,7 @@ Plots MNIST digits (left), projections on a 2-D space (prediction, center) and t
 \usage{
 plot.mnist(x = mnist$test$x, label = mnist$test$y + 1, model = prcomp(mnist$train$x),
            predictions = predict(model, x)[,1:2], reconstructions = tcrossprod(predictions, model$rotation[,1:2]),
-		   highlight.digits = c(11, 3, 2, 91, 20, 188, 92, 1, 111, 13),
+		   show.reconstructions = TRUE, highlight.digits = c(11, 3, 2, 91, 20, 188, 92, 1, 111, 13),
 		   digits.col = c("#FF0000FF", "#0000FFFF", "#964B00FF", "#FF00FFFF", "#00AAAAFF", "#00EE00FF", "#000000FF", "#000000FF", "#AAAAAAFF", "#FF9900FF"),
 		   digits.alphas.reverse = c(FALSE, TRUE)[c(1, 1, 1, 1, 1, 1, 2, 1, 1, 1)],
 		   pch = 21,
@@ -34,6 +34,7 @@ plot.mnist(x = mnist$test$x, label = mnist$test$y + 1, model = prcomp(mnist$trai
 	\item{model}{An optional model to compute predictions and reconstructions. If supplied, you probably need to supply \code{reconstructions} as well. Ignored when both \code{predictions} and \code{reconstructions} are provided}
 	\item{predictions}{A Nx2 matrix with 2 columns containing predictions.}
 	\item{reconstructions}{A Nx784 matrix with the reconstructions of the digits.}
+	\item{show.reconstructions}{Whether to plot a column of reconstructions to the right.}
 	\item{highlight.digits}{The indices of the P digits to draw in the margin, ideally 10 of them.}
 	\item{digits.col}{A vector of P colors for the \code{highlight.digits}.}
 	\item{digits.alphas.reverse}{A logical vector of length P, \code{TRUE} when the digits has to be plotted white-on-color, \code{FALSE} when the digit has to be plotted color-on-white.}
