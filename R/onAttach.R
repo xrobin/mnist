@@ -7,6 +7,5 @@
 		dir.create(paste(system.file(package="mnist"), "data", sep=.Platform$file.sep))
 		mnist <- download.mnist(global = TRUE)
 	}
-	data(mnist) 
-	packageStartupMessage("'mnist' dataset loaded.")
+	packageStartupMessage("Use data(mnist) to load the MNIST dataset.")
 }
