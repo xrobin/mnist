@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/xrobin/mnist.svg?branch=master)](https://travis-ci.org/xrobin/mnist)
+[![Codecov coverage](https://codecov.io/github/xrobin/mnist/branch/master/graphs/badge.svg)](https://codecov.io/github/xrobin/mnist)
 mnist
 =============
 
