@@ -25,7 +25,7 @@ plot.mnist(x = mnist$test$x, label = mnist$test$y + 1, model = prcomp(mnist$trai
 		   ylab = "Node 2",
 		   xlim = NULL,
 		   ylim = NULL,
-		   ncol = 15,
+		   ncol = 10,
 		   ...)
 }
 
