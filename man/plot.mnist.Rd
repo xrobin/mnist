@@ -82,14 +82,16 @@ plot.mnist(prediction = predict(pca, mnist$test$x), reconstruction=tcrossprod(pr
 # Note that it also works with no arguments - pca is performed
 plot.mnist()
 
-# Change the number of columns. Digits should be square in a square plot device
 \dontrun{
+# Change the number of columns. Digits will be square in a square plot device
 plot.mnist(ncol = 8)
 # Digits will be sqare in a 16:10 plot
 plot.mnist(ncol = 14)
 }
 
-# With a different number of digits one should adjust ncol
+# With a different number of digits (here 3: 0, 1 and 2) one should adjust ncol to something reasonable.
+# Note that with ncol = 1, projections will be very stretched. The following code reverses the x and y from PCA
+# to have more space for the 1st component.
 mnist.02 <- mnist
 mnist.02$train$x <- mnist$train$x[mnist$train$y < 3,]
 mnist.02$train$y <- mnist$train$y[mnist$train$y < 3]
