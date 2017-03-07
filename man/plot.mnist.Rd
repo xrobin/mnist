@@ -87,6 +87,8 @@ plot.mnist()
 plot.mnist(ncol = 8)
 # Digits will be sqare in a 16:10 plot
 plot.mnist(ncol = 14)
+# With a 16:9 device we'd need ncol = 15.7778, ncol = 16 is a fair approximation
+plot.mnist(ncol = 16)
 }
 
 # With a different number of digits (here 3: 0, 1 and 2) one should adjust ncol to something reasonable.
