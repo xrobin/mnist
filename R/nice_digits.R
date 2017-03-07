@@ -27,9 +27,9 @@ plot.mnist <- function(x = mnist$test$x, label = mnist$test$y + 1, model = prcom
 	alphas.gen <- expand.grid(c(0:9, LETTERS[1:6]), c(0:9, LETTERS[1:6]))
 	alphas <- paste(alphas.gen[,2], alphas.gen[,1], sep="")
 	
-	sapply(1:10, function(i) {show.digit(x[highlight.digits[i],], col=paste(substring(digits.col[label[highlight.digits[i]]], 1, 7), if (digits.alphas.reverse[i]) rev(alphas) else alphas, sep=""))})
+	sapply(seq_along(highlight.digits), function(i) {show.digit(x[highlight.digits[i],], col=paste(substring(digits.col[label[highlight.digits[i]]], 1, 7), if (digits.alphas.reverse[i]) rev(alphas) else alphas, sep=""))})
 	if (show.reconstructions) {
-		sapply(1:10, function(i) {show.digit(reconstructions[highlight.digits[i],], col=paste(substring(digits.col[label[highlight.digits[i]]], 1, 7), if (digits.alphas.reverse[i]) rev(alphas) else alphas, sep=""))})
+		sapply(seq_along(highlight.digits), function(i) {show.digit(reconstructions[highlight.digits[i],], col=paste(substring(digits.col[label[highlight.digits[i]]], 1, 7), if (digits.alphas.reverse[i]) rev(alphas) else alphas, sep=""))})
 	}
 	
 	
