@@ -16,11 +16,12 @@ plot.mnist <- function(x = mnist$test$x, label = mnist$test$y + 1, model = prcom
 					   ylab = "Node 2",
 					   xlim = NULL,
 					   ylim = NULL,
+					   ncol = 15,
 					   ...
 					   ) {
 	
 	n.highlight <- length(highlight.digits)
-	layout(cbind(seq_along(highlight.digits), matrix(1 + n.highlight + ifelse(show.reconstructions, n.highlight, 0), nrow=n.highlight, ncol=15), if (show.reconstructions) seq_along(highlight.digits) + n.highlight))
+	layout(cbind(seq_along(highlight.digits), matrix(1 + n.highlight + ifelse(show.reconstructions, n.highlight, 0), nrow=n.highlight, ncol=ncol), if (show.reconstructions) seq_along(highlight.digits) + n.highlight))
 	
 	opar <- par(cex=cex)
 	
