@@ -2,7 +2,6 @@ context("Data")
 
 
 test_that("'mnist' is available after package load", {
-	mnist.dl <- download.mnist()
 	expect_output_file(str(mnist), "../output/expect-str-mnist-output.txt")
 })
 
