@@ -7,6 +7,8 @@ This package makes [the MNIST dataset](http://yann.lecun.com/exdb/mnist/) easily
 
 It also provides a few convenience functions, some of them taken from [this gist by brendano](https://gist.github.com/brendano/39760).
 
+[See my blog for an example](https://xavier.robin.name/en/blog/2022/06/11/deep-learning-of-mnist-handwritten-digits).
+
 Installation
 -------
 
